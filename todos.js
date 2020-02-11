@@ -45,6 +45,10 @@ function renderTodos() {
 function addTodo() {
   var todoText = document.querySelector("input").value;
 
+  if(!todoText){
+    return
+  }
+
   todos.push(todoText);
   renderTodos();
   inputElement.value = " ";
